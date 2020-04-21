@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/styles/Bootstrap-Image-Uploader.css">
+    <link rel="stylesheet" href="static/styles/Drag--Drop-Upload-Form.css">
+    <link rel="stylesheet" href="static/styles/Pretty-Header.css">
+    <link rel="stylesheet" href="static/styles/styles.css">
+</head>
+
+<body style="background-color: rgb(0,0,0);">
+    <div class='messages' id='messages'>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <li class='messages'> {{ message }} </li>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <nav class="navbar navbar-light navbar-expand-md custom-header" style="height: 46px;">
+        <div class="container-fluid">
+            <div><a class="navbar-brand" href="#">Gradient<span>works </span> </a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+            <div
+                class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Overview </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Surveys </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#"> Reports</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="#"> Roles</a></li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="padding-right: 13px;margin: -25px;padding-bottom: 6px;padding-left: 10px;"> </a>
+                        <div class="dropdown-menu dropdown-menu-right" role="menu"><a class="dropdown-item" role="presentation" href="#">Settings </a><a class="dropdown-item" role="presentation" href="#">Payments </a><a class="dropdown-item" role="presentation" href="#">Logout </a></div>
+                    </li>
+                </ul>
+        </div>
+        </div>
+    </nav><div class="bootstrap_img_upload">
+<div class="container py-5">
+
+    <header class="text-white text-center">
+        <h1 class="display-4">Upload Images</h1>
+        <img src="https://res.cloudinary.com/mhmd/image/upload/v1564991372/image_pxlho1.svg" alt="" width="150" class="mb-4">
+    </header>
+
+
+    <div class="row py-4">
+        <div class="col-lg-6 mx-auto">
+            <form method=post enctype=multipart/form-data>
+            <!-- Upload image input-->
+            <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                <input id="upload" type="file" multiple data-show-upload="true" class="form-control border-0" name="file[]">
+                <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+                <div class="input-group-append">
+                    <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                </div>
+            </div>
+            <div style="text-align:center;">
+            <input type = "submit" class = "button button1" value="Upload">
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/Bootstrap-Image-Uploader.js"></script>
+    <script src="static/js/index.js"></script>
+</body>
+
+</html>
